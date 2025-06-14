@@ -4,7 +4,7 @@ const app = express();
 
 const products = [
   { id: 1, name: "Product 1", price: 100 },
-  { id: 2, name: "Product 2", price: 200 },
+  { id: 3, name: "Product 2", price: 200 },
 ];
 
 app.get("/", (req, res) => {
@@ -12,7 +12,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/products", (req, res) => {
-  res.json(products); // Mejor usar .json()
+  //res.send(products); // Mejor usar .json()
+  res.json(products);
 });
 
 const PORT = 3000;
